@@ -1,22 +1,26 @@
 +function ($) {
     "use strict";
 
-    setTimeout(titleFade, 2000);
+    let lampSmall = $('#lamp_small_img');
+    let lampBig = $('.lamp_big');
 
-    function titleFade() {
-        let inside = $('.inside');
-
-        inside.animate({height: '70%', backgroundColor: 'red'}, "slow");
-        inside.animate({width: '60%'}, "slow");
-        inside.animate({height: '35%'}, "slow");
-        inside.animate({width: '35%'}, "slow", 'linear', function () {
-            welcomeFade();
+    lampSmall.hover(
+        function () {
+            lampSmall.animate({marginTop: '10px', width: '146px', height: '144px', }, 'slow')
+        },
+        function () {
+            lampSmall.animate({width: '114px', height: '132px', marginTop: '20px'}, 'slow')
         });
-    }
 
-    function welcomeFade() {
-        $('#welcome').animate({left: 'fadeOut', opacity: 'hide'}, 'slow', 'linear');
-    }
+    lampBig.hover(
+        function () {
+            lampBig.animate({width: '300px', height: '325px', marginTop: '5px'}, 'slow')
+        },
+        function () {
+            lampBig.animate({width: '288px', height: '300px', marginTop: '30px'}, 'slow')
+        });
+
+
 
 
 }(jQuery);
