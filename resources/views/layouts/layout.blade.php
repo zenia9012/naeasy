@@ -11,14 +11,14 @@
 
 </head>
 <body>
-    <div id="site">
-        @include('includes.header')
+<div id="site">
+    {{--@include('includes.header')--}}
 
-        @yield('content')
-    </div>
+    @yield('content')
+</div>
 
-    <!-- Scripts -->
-    @include('includes.script')
+<!-- Scripts -->
+@include('includes.script')
 </body>
 
 @include('includes.footer')

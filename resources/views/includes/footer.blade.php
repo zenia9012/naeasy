@@ -1,84 +1,35 @@
-<!--Footer-->
-<footer class="page-footer navbar-default navbar-inverse">
-
-    <!--Footer Links-->
+<nav class="navbar navbar-inverse navbar-static-top">
     <div class="container">
+        <div class="navbar-header">
 
-        <!-- Footer links -->
-        <div class="row text-center text-md-left mt-3 pb-3">
+            <!-- Collapsed Hamburger -->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#app-navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
 
-            <!--First column-->
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h4 class="title mb-4 font-bold">{{ env('APP_NAME') }}</h4>
-                <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-            <!--/.First column-->
-
-            <hr class="w-100 clearfix d-md-none">
-
-            <!--Second column-->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h6 class="title mb-4 font-bold">Partner</h6>
-
-            </div>
-            <!--/.Second column-->
-
-            <hr class="w-100 clearfix d-md-none">
-
-            <!--Third column-->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h6 class="title mb-4 font-bold">Useful links</h6>
-
-            </div>
-            <!--/.Third column-->
-
-            <hr class="w-100 clearfix d-md-none">
-
-            <!--Fourth column-->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h6 class="title mb-4 font-bold">Contact</h6>
-                <p><i class="fa fa-envelope mr-3"></i> email </p>
-            </div>
-            <!--/.Fourth column-->
-
-        </div>
-        <!-- Footer links -->
-
-        <hr>
-
-        <div class="row py-3 d-flex align-items-center">
-
-            <!--Grid column-->
-            <div class="col-md-8 col-lg-9">
-
-                <!--Copyright-->
-                <p class="text-center text-md-left grey-text">©{{ \Carbon\Carbon::now()->format('Y') }} Copyright: {{ env('APP_NAME') }}</p>
-                <!--/.Copyright-->
-
-            </div>
-            <!--Grid column-->
-
-            <!--Grid column-->
-            <div class="col-md-4 col-lg-3 ml-lg-0">
-
-
-            {{--<div class="social-section text-center text-md-left">--}}
-                {{--<ul>--}}
-                    {{--<li><a class="btn-floating btn-sm rgba-white-slight mr-xl-4"><i class="fa fa-facebook"></i></a></li>--}}
-                    {{--<li><a class="btn-floating btn-sm rgba-white-slight mr-xl-4"><i class="fa fa-twitter"></i></a></li>--}}
-                    {{--<li><a class="btn-floating btn-sm rgba-white-slight mr-xl-4"><i class="fa fa-google-plus"></i></a>--}}
-                    {{--</li>--}}
-                    {{--<li><a class="btn-floating btn-sm rgba-white-slight mr-xl-4"><i class="fa fa-linkedin"></i></a></li>--}}
-                {{--</ul>--}}
-            {{--</div>--}}
-
-
-            </div>
-            <!--Grid column-->
-
+            <!-- Branding Image -->
+            <a class="navbar-brand" href="{{ url('/') }}">
+                {{ config('app.name') }}
+            </a>
         </div>
 
+        <div class="collapse navbar-collapse" id="app-navbar-collapse">
+            <!-- Left Side Of Navbar -->
+
+            <!-- Right Side Of Navbar -->
+            <ul class="nav navbar-nav navbar-right">
+                <!-- Authentication Links -->
+
+                <li><a href="#">{{ __('base.menu_service') }}</a></li>
+                <li><a href="{{ route('about') }}">{{ __('base.menu_about') }}</a></li>
+                <li><a href="#">{{ __('base.menu_kp') }}</a></li>
+                <li><a href="{{ route('contact') }}">{{ __('base.menu_contact') }}</a></li>
+
+            </ul>
+        </div>
     </div>
-
-</footer>
-<!--/.Footer-->
+</nav>
