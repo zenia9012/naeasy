@@ -2,7 +2,8 @@
 
 @section('content')
 
-    <h1>Example Page</h1>
+    @include('blocks.main_image')
 
+    @include('blocks.services')
 
 @endsection

@@ -31,3 +31,74 @@
 .page-footer{
     color: #ffffff;
 }
+
+.main_image{
+    width: 100%;
+    background: url('../img/main/main.png') no-repeat 100% 10%;
+    height: 500px;
+    background-size: 100%;
+}
+
+.pm0{
+    padding: 0;
+    margin: 0;
+}
+
+.lamp_small img{
+    display: block;
+    margin: 0 auto;
+    margin-top:20px;
+}
+
+.lamp_small h2{
+    font-family:Raleway;
+    font-size:3.0em;
+    color: #2b2f3e;
+    font-weight:bolder;
+    margin-bottom:0;
+    line-height:0.5;
+}
+
+.lamp_small h2 span{
+    color: #2b2f3e;
+    font-weight:lighter;
+}
+
+.lamp_small p{
+    font-family:Raleway;
+    color: #2b2f3e;
+    font-weight:lighter;
+    font-size:1.75em;
+}
+
+.lamp_big{
+    height: 300px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.navbar{
+    margin-bottom: 0;
+}
+
+.about_img{
+    margin-bottom: 20px;
+}
+
+.about h2{
+    margin: 30px 0;
+}
+
+.social_link a{
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    color: #000;
+    font-size:2em;
+}
+
+.contact_form{
+    margin: 20px 0;
+}
