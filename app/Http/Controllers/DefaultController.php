@@ -9,4 +9,19 @@ class DefaultController extends Controller
 
 		return view('index.main');
 	}
+
+	public function about(  ) {
+
+		return view('index.about');
+	}
+
+	public function contact( ) {
+
+		return view('index.contact');
+	}
+
+	public function commercial(  ) {
+
+		return view('index.contact');
+	}
 }
