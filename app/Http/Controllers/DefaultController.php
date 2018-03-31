@@ -24,4 +24,9 @@ class DefaultController extends Controller
 
 		return view('index.contact');
 	}
+
+	public function services(  ) {
+
+		return view('index.services');
+	}
 }
