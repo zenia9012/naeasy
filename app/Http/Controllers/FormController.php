@@ -19,7 +19,8 @@ class FormController extends Controller {
 		$message = $request->input( 'message' );
 
 		Feedback::create( $name, $email, $message );
+		$successMessage = __('base.success_send_message');
 
-		return back();
+		return back()->with('message', $successMessage);
 	}
 }
