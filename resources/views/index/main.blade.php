@@ -6,4 +6,6 @@
 
     @include('blocks.services')
 
+    @include('blocks.callback')
+
 @endsection
