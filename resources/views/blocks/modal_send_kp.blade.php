@@ -14,7 +14,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="" class="form-horizontal" method="post">
+                <form action="{{ route('sendKP') }}" class="form-horizontal" method="post">
                     {{csrf_field()}}
                     <div class="modal-body">
                         <div class="row">
@@ -31,8 +31,7 @@
                                     <label for="email" class="control-label"></label>
                                     <div class="col-md-12">
                                         <input type="email" class="form-control" id="email" name="email"
-                                               placeholder="{{ __('base.pl_email') }}"
-                                               required>
+                                               placeholder="{{ __('base.pl_email') }}" required>
                                     </div>
                                 </div>
 

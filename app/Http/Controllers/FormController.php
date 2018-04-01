@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Callback;
 use App\Models\Feedback;
+use App\Models\SendCommercial;
 use Illuminate\Http\Request;
 
 class FormController extends Controller {
@@ -45,6 +46,25 @@ class FormController extends Controller {
 		$phone   = $request->input( 'phone' );
 
 		Callback::create( $name, $phone );
+
+		return back();
+	}
+
+	/**
+	 * method save request for callback from users, first validate data, than save data to database
+	 *
+	 */
+	public function sendKP( Request $request ) {
+
+		$this->validate( $request, [
+			'name'    => 'required',
+			'email'   => 'required',
+		] );
+
+		$name    = $request->input( 'name' );
+		$email   = $request->input( 'email' );
+
+		SendCommercial::create( $name, $email );
 
 		return back();
 	}

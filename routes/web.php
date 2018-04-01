@@ -12,6 +12,7 @@ Route::get( '/services', 'DefaultController@services' )->name( 'services' );
 
 Route::post( '/feedback', 'FormController@feedback' )->name( 'feedback' );
 Route::post( '/callback', 'FormController@callback' )->name( 'callback' );
+Route::post( '/sendkp', 'FormController@sendKP' )->name( 'sendKP' );
 
 
 Route::group( [
