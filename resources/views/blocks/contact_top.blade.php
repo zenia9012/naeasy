@@ -4,9 +4,9 @@
             <div class="col-md-6">
                 <h2 class="text-center">{{ __('base.our_contact') }}</h2>
                 <ul>
-                    <li>{{ __('base.tel') }} : <a href="tel:0939898988">0939898988</a></li>
-                    <li>{{ __('base.tel') }} : <a href="tel:0979898988">0979898988</a></li>
-                    <li>{{ __('base.email') }} : <a href="malito:naeasy@gmail.com">naeasy@gmail.com</a></li>
+                    <li>{{ __('base.tel') }} : <a href="tel:{{ $phone1 }}">{{ $phone1 }}</a></li>
+                    <li>{{ __('base.tel') }} : <a href="tel:{{ $phone2 }}">{{ $phone2 }}</a></li>
+                    <li>{{ __('base.email') }} : <a href="malito:{{ $email }}">{{ $email }}</a></li>
                 </ul>
             </div>
             <div class="col-md-6">
