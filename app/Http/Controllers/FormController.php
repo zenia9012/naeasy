@@ -2,10 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Callback;
 use App\Models\Feedback;
 use Illuminate\Http\Request;
 
 class FormController extends Controller {
+
+	/**
+	 * method save feedback from users, first validate data, than save data to database
+	 *
+	 */
 	public function feedback( Request $request ) {
 
 		$this->validate( $request, [
@@ -22,5 +28,24 @@ class FormController extends Controller {
 		$successMessage = __('base.success_send_message');
 
 		return back()->with('message', $successMessage);
+	}
+
+	/**
+	 * method save request for callback from users, first validate data, than save data to database
+	 *
+	 */
+	public function callback( Request $request ) {
+
+		$this->validate( $request, [
+			'name'    => 'required',
+			'phone'   => 'required',
+		] );
+
+		$name    = $request->input( 'name' );
+		$phone   = $request->input( 'phone' );
+
+		Callback::create( $name, $phone );
+
+		return back();
 	}
 }

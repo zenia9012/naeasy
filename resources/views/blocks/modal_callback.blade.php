@@ -1,5 +1,5 @@
 <button type="button" class="btn btn-primary btn-modal" data-toggle="modal" data-target="#modal_callback">
-    {{ __('main.button_get_kp') }}
+    {{ __('main.button_callback') }}
 </button>
 
 <!-- Modal -->
@@ -14,7 +14,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="" class="form-horizontal" method="post">
+                <form action="{{ route('callback') }}" class="form-horizontal" method="post">
                     {{csrf_field()}}
                     <div class="modal-body">
                         <div class="row">
@@ -28,9 +28,9 @@
                                 </div>
                                 <div class="clearfix"></div>
                                 <div class="form-group">
-                                    <label for="email" class="control-label"></label>
+                                    <label for="phone" class="control-label"></label>
                                     <div class="col-md-12">
-                                        <input type="text" class="form-control" id="email" name="email"
+                                        <input type="text" class="form-control" id="phone" name="phone"
                                                placeholder="{{ __('base.pl_phone') }}"
                                                pattern="\d*" required>
                                     </div>
