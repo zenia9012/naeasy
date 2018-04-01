@@ -5,17 +5,17 @@ namespace App\Http\Controllers\Admin;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 
 // VALIDATION: change the requests to match your own file names if you need form validation
-use App\Http\Requests\SeoRequest as StoreRequest;
-use App\Http\Requests\SeoRequest as UpdateRequest;
+use App\Http\Requests\CallbackRequest as StoreRequest;
+use App\Http\Requests\CallbackRequest as UpdateRequest;
 
-class SeoCrudController extends CrudController
+class CallbackCrudController extends CrudController
 {
     public function setup()
     {
 
-        $this->crud->setModel('App\Models\Seo');
-        $this->crud->setRoute(config('backpack.base.route_prefix') . '/seo');
-        $this->crud->setEntityNameStrings('seo', 'seos');
+        $this->crud->setModel('App\Models\Callback');
+        $this->crud->setRoute(config('backpack.base.route_prefix') . '/callback');
+        $this->crud->setEntityNameStrings('callback', 'callbacks');
 
         $this->crud->setFromDb();
     }
