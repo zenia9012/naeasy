@@ -7,9 +7,11 @@ Route::get( '/contact', 'DefaultController@contact' )->name( 'contact' );
 Route::get( '/commercial', 'DefaultController@commercial' )->name( 'commercial' );
 Route::get( '/services', 'DefaultController@services' )->name( 'services' );
 
+
 // form
 
 Route::post( '/feedback', 'FormController@feedback' )->name( 'feedback' );
+Route::post( '/callback', 'FormController@callback' )->name( 'callback' );
 
 
 Route::group( [
