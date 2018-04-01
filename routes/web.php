@@ -19,6 +19,7 @@ Route::group( [
 ], function () {
 
 	CRUD::resource( 'setting', 'SettingCrudController' );
+	CRUD::resource( 'seo', 'SeoCrudController' );
 
 } );
 
