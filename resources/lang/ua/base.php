@@ -7,6 +7,7 @@ return [
 	'menu_about'   => 'Про нас',
 	'menu_kp'      => 'Отримати комерційну пропозицію',
 	'menu_contact' => 'Контакти',
+	'menu_main'    => 'Головна',
 
 
 	//contact page

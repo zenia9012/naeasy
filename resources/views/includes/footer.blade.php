@@ -1,35 +1,43 @@
 <nav class="navbar navbar-inverse navbar-static-top">
     <div class="container">
-        <div class="navbar-header">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="navbar-header">
 
-            <!-- Collapsed Hamburger -->
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#app-navbar-collapse" aria-expanded="false">
-                <span class="sr-only">Toggle Navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+                    <!-- Collapsed Hamburger -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#app-navbar-collapse" aria-expanded="false">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
 
-            <!-- Branding Image -->
-            <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name') }}
-            </a>
-        </div>
+                    <!-- Branding Image -->
+                    <div class="brand_footer text-center">
+                        <a href="{{ route('main') }}"><img class="img-responsive" src="{{ asset('img/main/lamp-small.png') }}" alt="naeasy"></a>
+                        <a href="{{ route('main') }}"><h2><span class="na">NA</span>EASY</h2></a>
+                    </div>
 
-        <div class="collapse navbar-collapse" id="app-navbar-collapse">
-            <!-- Left Side Of Navbar -->
+                </div>
 
-            <!-- Right Side Of Navbar -->
-            <ul class="nav navbar-nav navbar-right">
-                <!-- Authentication Links -->
+            </div>
+            <div class="col-md-6">
+                <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                    <!-- Left Side Of Navbar -->
 
-                <li><a href="{{ route('services') }}">{{ __('base.menu_service') }}</a></li>
-                <li><a href="{{ route('about') }}">{{ __('base.menu_about') }}</a></li>
-                {{--<li><a href="#">{{ __('base.menu_kp') }}</a></li>--}}
-                <li><a href="{{ route('contact') }}">{{ __('base.menu_contact') }}</a></li>
+                    <!-- Right Side Of Navbar -->
+                    <ul class="nav navbar-nav menu_main menu_footer">
 
-            </ul>
+                        <li><a href="{{ route('main') }}">{{ __('base.menu_main') }}</a></li>
+                        <li><a href="{{ route('services') }}">{{ __('base.menu_service') }}</a></li>
+                        <li><a href="{{ route('about') }}">{{ __('base.menu_about') }}</a></li>
+                        <li><a href="{{ route('contact') }}">{{ __('base.menu_contact') }}</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
         </div>
     </div>
 </nav>

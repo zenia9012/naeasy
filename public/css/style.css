@@ -149,3 +149,30 @@
     color: #333333;
     background-color: #999999;
 }
+.brand_footer{
+    margin: 7px;
+}
+.brand_footer img {
+    display: inline;
+    width: 80px;
+    margin-right: 10px;
+}
+
+.brand_footer h2 {
+    display: inline;
+    font-family: Raleway;
+    font-size: 3.0em;
+    color: #999999;
+    font-weight: bolder;
+    line-height: 2;
+}
+.brand_footer h2 span {
+    color: #666;
+    font-weight: lighter;
+}
+.brand_footer a{
+    text-decoration: none;
+}
+.menu_footer{
+    margin-top: 20px;
+}
