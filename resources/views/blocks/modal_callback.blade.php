@@ -1,5 +1,5 @@
-<button type="button" class="btn btn-primary btn-modal" data-toggle="modal" data-target="#modal_callback">
-    {{ __('main.button_callback') }}
+<button type="button" class="btn btn-modal" data-toggle="modal" data-target="#modal_callback">
+    <i class="fas fa-phone"></i>
 </button>
 
 <!-- Modal -->

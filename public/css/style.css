@@ -121,6 +121,7 @@
 
 .btn-modal {
     font-size: 1.2em;
+    background-color: #e3e3e3;
 }
 
 .callback {
@@ -175,4 +176,13 @@
 }
 .menu_footer{
     margin-top: 20px;
+}
+#email_send{
+    font-size: 3em;
+    color: deepskyblue;
+}
+.fa-phone{
+    font-size: 2.5em;
+    color: deepskyblue;
+    /*transform: rotate(225deg);*/
 }

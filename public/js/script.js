@@ -3,6 +3,24 @@
 
     let lampSmall = $('#lamp_small_img');
     let lampBig = $('.lamp_big');
+    let phone = $('.btn-modal');
+    let sendKp = $('#kp');
+
+    sendKp.hover(
+        function () {
+            $('#email_send').removeClass('fa-envelope').addClass('fa-envelope-open');
+        },
+        function () {
+            $('#email_send').removeClass('fa-envelope-open').addClass('fa-envelope');
+        });
+
+    lampSmall.hover(
+        function () {
+            lampSmall.animate({marginTop: '10px', width: '146px', height: '144px', }, 'slow')
+        },
+        function () {
+            lampSmall.animate({width: '114px', height: '132px', marginTop: '20px'}, 'slow')
+        });
 
     lampSmall.hover(
         function () {

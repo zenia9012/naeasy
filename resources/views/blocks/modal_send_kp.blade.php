@@ -1,5 +1,5 @@
-<button type="button" class="btn btn-primary btn-modal" data-toggle="modal" data-target="#modal_kp">
-    {{ __('main.button_get_kp') }}
+<button id="kp" type="button" class="btn btn-modal" data-toggle="modal" data-target="#modal_kp">
+    <i id="email_send" class="fa fa-envelope"></i>
 </button>
 
 <!-- Modal -->
