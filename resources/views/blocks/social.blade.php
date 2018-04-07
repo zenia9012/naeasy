@@ -1,4 +1,4 @@
-<div class="social">
+<div class="@if(url()->current() == env('APP_URL') . '/contact')social @else social container @endif">
     <div class="row">
         <div class="col-md-12 text-center">
             <h2>{{ __('about.social_title') }}</h2>
