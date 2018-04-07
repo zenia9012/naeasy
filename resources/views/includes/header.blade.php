@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse navbar-static-top">
+<nav class="navbar navbar-static-top" style="background-color: #e3e3e3">
     <div class="container">
         <div class="navbar-header">
 
@@ -12,23 +12,21 @@
             </button>
 
             <!-- Branding Image -->
-            <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name') }}
-            </a>
+            {{--<a class="navbar-brand" href="{{ url('/') }}">--}}
+            {{--{{ config('app.name') }}--}}
+            {{--</a>--}}
         </div>
 
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <!-- Left Side Of Navbar -->
 
             <!-- Right Side Of Navbar -->
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav nav-pills nav-justified menu_main">
                 <!-- Authentication Links -->
-                @guest
-                    <li><a href="#">Послуги</a></li>
-                    <li><a href="#">Про нас</a></li>
-                    <li><a href="#">Отримати комерційну пропозицію</a></li>
-                    <li><a href="#">Контакти</a></li>
-                @endguest
+                <li class="nav-item"><a href="{{ route('services') }}">{{ __('base.menu_service') }}</a></li>
+                <li class="nav-item"><a href="{{ route('about') }}">{{ __('base.menu_about') }}</a></li>
+                <li class="nav-item"><a href="{{ route('contact') }}">{{ __('base.menu_contact') }}</a></li>
+
             </ul>
         </div>
     </div>
