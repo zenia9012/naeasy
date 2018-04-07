@@ -12,14 +12,14 @@ return [
     */
 
     // Project name. Shown in the breadcrumbs and a few other places.
-    'project_name' => 'Basic',
+    'project_name' => 'Naeasy',
 
     // Menu logos
-    'logo_lg'   => 'Basic',
-    'logo_mini' => 'BS',
+    'logo_lg'   => 'Naeasy',
+    'logo_mini' => 'NE',
 
     // Developer or company name. Shown in footer.
-    'developer_name' => false,
+    'developer_name' => "Yevhenii",
 
     // Developer website. Link in footer.
     'developer_link' => false,
