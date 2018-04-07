@@ -24,9 +24,9 @@
             <ul class="nav navbar-nav navbar-right">
                 <!-- Authentication Links -->
 
-                <li><a href="#">{{ __('base.menu_service') }}</a></li>
+                <li><a href="{{ route('services') }}">{{ __('base.menu_service') }}</a></li>
                 <li><a href="{{ route('about') }}">{{ __('base.menu_about') }}</a></li>
-                <li><a href="#">{{ __('base.menu_kp') }}</a></li>
+                {{--<li><a href="#">{{ __('base.menu_kp') }}</a></li>--}}
                 <li><a href="{{ route('contact') }}">{{ __('base.menu_contact') }}</a></li>
 
             </ul>

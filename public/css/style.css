@@ -137,3 +137,15 @@
     margin: 0 auto;
     padding:20px 0;
 }
+.menu_main{
+    margin: 2px 0;
+}
+.menu_main li a{
+    font-size: 20px;
+    font-weight:bold;
+    color: #444444;
+}
+.menu_main li>a:hover,.menu_main li>a:hover{
+    color: #333333;
+    background-color: #999999;
+}
