@@ -12,7 +12,7 @@ class SendCommercial extends Model
 
 	protected $fillable = [
 		'name',
-		'phone',
+		'email',
 		'comment',
 	];
 
