@@ -26,6 +26,7 @@ Route::group( [
 	CRUD::resource( 'callback', 'CallbackCrudController' );
 	CRUD::resource( 'feedback', 'FeedbackCrudController' );
 	CRUD::resource( 'sendcommercial', 'SendCommercialCrudController' );
+	CRUD::resource( 'service', 'ServiceCrudController' );
 
 } );
 
