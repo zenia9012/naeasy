@@ -2,8 +2,11 @@
     <div class="row">
         <div class="col-md-4 col-sm-12">
             <div class="features">
-                <h3>{{ __('main.marketing_service_title') }}</h3>
-                <p>{{ __('main.marketing_service_text') }}</p>
+                <h3>{{ $service['smm']->title }}</h3>
+                <p>
+                    {!! str_limit($service['smm']->ua, $service['smm']->length,'....') !!}
+                    <a href="{{ route('services') }}">{{ __('base.read_more') }}</a>
+                </p>
             </div>
         </div>
         <div class="col-md-4 col-sm-12 hidden-xs">
@@ -13,27 +16,40 @@
         </div>
         <div class="col-md-4 col-sm-12">
             <div class="features">
-                <h3>{{ __('main.biznes_service_title') }}</h3>
-                <p>{{ __('main.biznes_service_text') }}</p>
+                <h3>{{ $service['marketing']->title }}</h3>
+                <p>
+                    {!! str_limit($service['marketing']->ua, $service['marketing']->length,'....') !!}
+                    <a href="{{ route('services') }}">{{ __('base.read_more') }}</a>
+                </p>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-md-4 col-sm-12">
             <div class="features">
-                <h3>{{ __('main.smm_service_title') }}</h3>
-                <p>{{ __('main.smm_service_text') }}</p>
+                <h3>{{ $service['develop']->title }}</h3>
+                <p>
+                    {!! str_limit($service['develop']->ua, $service['develop']->length,'....') !!}
+                    <a href="{{ route('services') }}">{{ __('base.read_more') }}</a>
+                </p>
             </div>
         </div>
         <div class="col-md-4 col-sm-12">
             <div class="features">
-
+                <h3>{{ $service['email']->title }}</h3>
+                <p>
+                    {!! str_limit($service['email']->ua, $service['email']->length,'....') !!}
+                    <a href="{{ route('services') }}">{{ __('base.read_more') }}</a>
+                </p>
             </div>
         </div>
         <div class="col-md-4 col-sm-12">
             <div class="features">
-                <h3>{{ __('main.common_service_title') }}</h3>
-                <p>{{ __('main.common_service_text') }}</p>
+                <h3>{{ $service['bisnes']->title }}</h3>
+                <p>
+                    {!! str_limit($service['bisnes']->ua, $service['bisnes']->length,'....') !!}
+                    <a href="{{ route('services') }}">{{ __('base.read_more') }}</a>
+                </p>
             </div>
         </div>
     </div>

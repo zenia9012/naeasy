@@ -8,6 +8,7 @@ return [
 	'menu_kp'      => 'Отримати комерційну пропозицію',
 	'menu_contact' => 'Контакти',
 	'menu_main'    => 'Головна',
+	'read_more'    => 'Читати далі',
 
 
 	//contact page
