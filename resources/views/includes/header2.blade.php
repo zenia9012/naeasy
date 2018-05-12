@@ -13,7 +13,8 @@
 
             <!-- Branding Image -->
             <a class="navbar-brand" href="{{ url('/') }}">
-            {{ config('app.name') }}
+                <img width="30px" style="display: inline;" src="{{ asset('img/main/lamp-small.png') }}" alt="naeasy">
+                {{ config('app.name') }}
             </a>
         </div>
 

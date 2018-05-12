@@ -21,7 +21,7 @@ class Callback extends Model {
 	 * @param string $name
 	 * @param string $phone
 	 *
-	 * @return void
+	 * @return Callback
 	 */
 	public static function create( string $name, string $phone ) {
 		$callback = new Callback();
@@ -32,5 +32,7 @@ class Callback extends Model {
 		$callback->updated_at = Carbon::now();
 
 		$callback->save();
+
+		return $callback;
 	}
 }

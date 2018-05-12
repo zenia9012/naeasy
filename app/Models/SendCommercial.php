@@ -22,7 +22,7 @@ class SendCommercial extends Model
 	 * @param string $name
 	 * @param string $email
 	 *
-	 * @return void
+	 * @return SendCommercial
 	 */
 	public static function create( string $name, string $email ) {
 		$callback = new SendCommercial();
@@ -33,5 +33,7 @@ class SendCommercial extends Model
 		$callback->updated_at = Carbon::now();
 
 		$callback->save();
+
+		return $callback;
 	}
 }

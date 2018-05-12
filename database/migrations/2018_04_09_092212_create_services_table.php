@@ -18,6 +18,7 @@ class CreateServicesTable extends Migration
             $table->string('key');
             $table->string('title');
             $table->text('ua');
+            $table->text('all_text_ua');
             $table->integer('length')->default('300');
             $table->timestamps();
         });

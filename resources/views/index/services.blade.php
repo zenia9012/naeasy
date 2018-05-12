@@ -9,3 +9,9 @@
     @include('blocks.social')
 
 @endsection
+@section('script')
+
+    @parent
+    <script src="js/services.js"></script>
+
+@endsection

@@ -23,5 +23,7 @@ class Feedback extends Model {
 		$feedback->updated_at = Carbon::now();
 
 		$feedback->save();
+
+		return $feedback;
 	}
 }

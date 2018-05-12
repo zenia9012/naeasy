@@ -4,16 +4,12 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Service;
-
+use Illuminate\Http\Request;
 class DefaultController extends Controller
 {
 	public function index(  ) {
 
-		$service['smm'] = Service::getServiceBykey('smm');
-		$service['marketing'] = Service::getServiceBykey('marketing');
-		$service['develop'] = Service::getServiceBykey('develop');
-		$service['email'] = Service::getServiceBykey('email');
-		$service['bisnes'] = Service::getServiceBykey('bisnes');
+		$service = Service::getAllServices();
 		
 		return view('index.main', compact('service'));
 	}
@@ -28,13 +24,10 @@ class DefaultController extends Controller
 		return view('index.contact');
 	}
 
-	public function commercial(  ) {
+	public function services( Request $request ) {
 
-		return view('index.contact');
-	}
+		$service = Service::getAllServices();
 
-	public function services(  ) {
-
-		return view('index.services');
+		return view('index.services', compact('service'));
 	}
 }

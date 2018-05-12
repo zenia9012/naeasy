@@ -1,80 +1,63 @@
 <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
-    <li class="nav-item active">
-        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
-           aria-selected="true">{{ __('service.service_marketing_title') }}</a>
+    <li class="nav-item">
+        <a class="active" id="marketing-tab" data-toggle="tab" href="#marketing" role="tab" aria-controls="home"
+           aria-selected="true">
+            <span>
+                <img width="18px" src="{{ asset('img/service/marketing.png') }}" alt="marketing">
+            </span>
+            {{ __('service.service_marketing_title') }}
+        </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
-           aria-selected="false">{{ __('service.service_bisnes_title') }}</a>
+        <a class="nav-link" id="bisnes-tab" data-toggle="tab" href="#bisnes" role="tab" aria-controls="bisnes"
+           aria-selected="false">
+            <span>
+                <img class="" src="{{ asset('img/service/bisnes.png') }}" alt="training">
+            </span>
+            {{ __('service.service_bisnes_title') }}
+        </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
-           aria-selected="false">{{ __('service.service_develop_title') }}</a>
+        <a class="nav-link" id="develop-tab" data-toggle="tab" href="#develop" role="tab" aria-controls="smm"
+           aria-selected="false">
+            <span>
+                <img class="" src="{{ asset('img/service/web.png') }}" alt="develop">
+            </span>
+            {{ __('service.service_develop_title') }}
+        </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
-           aria-selected="false">{{ __('service.service_smm_title') }}</a>
+        <a class="nav-link" id="smm-tab" data-toggle="tab" href="#smm" role="tab" aria-controls="smm"
+           aria-selected="false">
+            <span>
+                <img class="" src="{{ asset('img/service/smm.png') }}" alt="smm">
+            </span>
+            {{ __('service.service_smm_title') }}
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="email-tab" data-toggle="tab" href="#email" role="tab" aria-controls="email"
+           aria-selected="false">
+            <span>
+                <img class="" src="{{ asset('img/service/smm.png') }}" alt="email">
+            </span>
+            {{ __('service.service_email_title') }}</a>
     </li>
 </ul>
 <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade active in" id="home" role="tabpanel" aria-labelledby="home-tab">
-        <p class="text-center">{{ __('service.service_marketing_text') }}</p>
-        <ul>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-        </ul>
-        <p class="text-center">{{ __('service.service_marketing_text') }}</p>
+    <div class="tab-pane fade" id="marketing" role="tabpanel" aria-labelledby="marketing-tab">
+        {!! $service['marketing']->all_text_ua !!}
     </div>
-    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-        {{ __('service.service_bisnes_text') }}
-        <ul>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-        </ul>
-        <p class="text-center">{{ __('service.service_marketing_text') }}</p>
+    <div class="tab-pane fade" id="bisnes" role="tabpanel" aria-labelledby="bisnes-tab">
+        {!! $service['bisnes']->all_text_ua !!}
     </div>
-    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-        {{ __('service.service_develop_text') }}
-        <ul>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-        </ul>
-        <p class="text-center">{{ __('service.service_marketing_text') }}</p>
+    <div class="tab-pane fade" id="develop" role="tabpanel" aria-labelledby="develop-tab">
+        {!! $service['develop']->all_text_ua !!}
     </div>
-    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-        {{ __('service.service_smm_text') }}
-        <ul>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-            <li>{{ __('service.service_marketing_title') }}</li>
-        </ul>
-        <p class="text-center">{{ __('service.service_marketing_text') }}</p>
+    <div class="tab-pane fade" id="smm" role="tabpanel" aria-labelledby="smm-tab">
+        {!! $service['smm']->all_text_ua !!}
+    </div>
+    <div class="tab-pane fade" id="email" role="tabpanel" aria-labelledby="email-tab">
+        {!! $service['email']->all_text_ua !!}
     </div>
 </div>

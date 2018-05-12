@@ -39,6 +39,6 @@
         @endif
     </div>
     <div class="form-gorup">
-        <button type="submit" class="btn btn-default">{{ __('base.pl_button') }}</button>
+        <button type="submit" class="btn btn-info">{{ __('base.pl_button') }}</button>
     </div>
 </form>

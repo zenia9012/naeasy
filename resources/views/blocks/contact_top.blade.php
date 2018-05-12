@@ -9,10 +9,15 @@
                     <li>{{ __('base.email') }} : <a href="malito:{{ $email }}">{{ $email }}</a></li>
                 </ul>
             </div>
+
+
             <div class="col-md-6">
                 @include('blocks.social')
             </div>
         </div>
+
+        @include('blocks.callback')
+
         <div class="row">
             <div class="col-md-12">
                 <div class="contact_form">

@@ -12,13 +12,17 @@
 </head>
 <body>
 <div id="site">
-    {{--@include('includes.header')--}}
 
     @yield('content')
+
 </div>
 
-<!-- Scripts -->
-@include('includes.script')
+@section('script')
+
+    @include('includes.script')
+
+@show
+
 </body>
 
 @include('includes.footer')

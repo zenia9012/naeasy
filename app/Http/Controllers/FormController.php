@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Callback;
+use App\Models\Contact;
 use App\Models\Feedback;
 use App\Models\SendCommercial;
 use Illuminate\Http\Request;
@@ -25,7 +26,12 @@ class FormController extends Controller {
 		$email   = $request->input( 'email' );
 		$message = $request->input( 'message' );
 
-		Feedback::create( $name, $email, $message );
+		$feedback = Feedback::create( $name, $email, $message );
+
+		Contact::create($request->except(['_token', 'message']));
+
+//		EmailController::NotifyAdminsFeedback($feedback);
+
 		$successMessage = __('base.success_send_message');
 
 		return back()->with('message', $successMessage);
@@ -45,7 +51,11 @@ class FormController extends Controller {
 		$name    = $request->input( 'name' );
 		$phone   = $request->input( 'phone' );
 
-		Callback::create( $name, $phone );
+		$callback = Callback::create( $name, $phone );
+
+		Contact::create($request->except(['_token']));
+
+		EmailController::NotifyAdminsCallback($callback);
 
 		return back();
 	}
@@ -64,7 +74,11 @@ class FormController extends Controller {
 		$name    = $request->input( 'name' );
 		$email   = $request->input( 'email' );
 
-		SendCommercial::create( $name, $email );
+		$commercial = SendCommercial::create( $name, $email );
+
+		Contact::create($request->except(['_token']));
+
+//		EmailController::NotifyAdminsSendKP($commercial);
 
 		return back();
 	}
