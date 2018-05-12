@@ -10,7 +10,8 @@ class Seo extends Model
     use CrudTrait;
 
     protected $fillable = [
-    	'name_page', 'slug_page', 'title', 'key_words', 'description'
+    	'name_page', 'slug_page', 'title', 'key_words', 'description',
+	    'og_image', 'og_title','og_description',
     ];
 
 	/**
@@ -44,7 +45,32 @@ class Seo extends Model
 		$seo->title = env('APP_NAME', 'Laravel');
 		$seo->key_words = env('APP_NAME', 'Laravel');
 		$seo->description = env('APP_NAME', 'Laravel');
+		$seo->og_description = env('APP_NAME', 'Laravel');
+		$seo->og_title = env('APP_NAME', 'Laravel');
+		$seo->og_image = env('APP_NAME', 'Laravel');
 
 		return $seo;
+	}
+
+	/**
+	 * Share seo info to all template by slug
+	 *
+	 * @return void
+	 */
+	public static function shareSeo() {
+		$slug = \Request::path();
+
+		$seo = self::slug( $slug );
+
+		\view()->share(
+			[
+				'seo_title'       => $seo->title,
+				'seo_description' => $seo->description,
+				'seo_keywords'    => $seo->key_words,
+				'og_title'       => $seo->og_title,
+				'og_description' => $seo->og_description,
+				'og_image'       => $seo->og_image,
+			]
+		);
 	}
 }

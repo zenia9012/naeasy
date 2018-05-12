@@ -3,10 +3,6 @@
 <head>
 
     @include('includes.meta')
-
-    <title>{{ config('app.name') }}</title>
-
-    <!-- Styles -->
     @include('includes.css')
 
 </head>
