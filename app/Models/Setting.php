@@ -30,4 +30,15 @@ class Setting extends Model
 
 		return $result->value;
 	}
+
+	/**
+	 * Share contact website to all template
+	 *
+	 * @return void
+	 */
+	public static function shareContact() {
+		\view()->share( 'phone1', self::getPhone1() );
+		\view()->share( 'phone2', self::getPhone2() );
+		\view()->share( 'email', self::getEmail() );
+	}
 }
